@@ -1,0 +1,470 @@
+/* Mobile First Design - starting with phone - up to 500px wide 
+
+Smaller to larger where the default CSS (CSS that is NOT inside a media query) will be for the smallest viewport width we are supporting. */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+/*  Note that %'s used on widths, margin, padding, etc... are always a percentage of the container element's width, etc... */
+#wrapper {
+  width: 90%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  box-shadow: .125em 0 .625em #222;
+  position: relative;
+}
+
+.mainHeader {
+  width: 100%;
+  background: url(../images/bg.png) repeat-x;
+  height: 4em;
+  position: relative;
+}
+
+.mainHeader > h1 {
+  /* border: 1px solid green; */
+  width: 96%;
+  padding-left: 4%;
+  font-family: Oxygen, sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.mainHeader > h2 {
+  font-size: .8em;
+  /* border: 1px solid red; */
+  width: 60%;
+  font-weight: 400;
+  color: #888;
+  line-height: 90%;
+  margin: 1% 4% 0 12%;
+}
+
+.acw {
+  font-size: .8em;
+  padding-left: 15%;
+}
+
+.mainNav {
+  min-height: 5em;
+  background-color: #660000;
+}
+
+.mainNav > ul {
+  list-style: none;
+  text-align: center;
+  /* border: 1px solid yellow; */
+}
+
+.mainNav li {
+  /* display: inline; */
+  float: left;
+  width: 33.3%;
+}
+
+.mainNav li:nth-child(4) {
+  clear: left;
+  float: left;
+  margin-left: 16%;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: .7em;
+  padding: 8% 0 6%;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 #000;
+}
+
+.mainNav a:hover {
+  background-color: #4d0000;
+}
+
+.mainNav sup {
+  font-size: .6em;
+  position: relative;
+  top: .4em;
+}
+
+/* .banner {
+  width: 100%;
+  border: 1px solid blue;
+  display: none;
+} */
+
+.banner > img {
+  max-width: 100%;
+}
+
+main {
+  /* border: 1px solid orange; */
+  background: url(../images/bg.png) repeat-x;
+  padding-top: 1em;
+  min-height: 20em;
+}
+
+main > .soldierPic {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  right: .625em;
+}
+
+#secondWI {
+  width: 2em;
+}
+
+main > .about {
+  margin: 0 6% 2.4% 5%;
+  width: 90%;
+  text-align: justify;
+  position: relative;
+}
+
+main > .about h2,
+.feedbackForm h2 {
+  color: #660000;
+  font-size: .9em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+
+main > .about p {
+  font-size: .8em;
+  line-height: 1.4em;
+}
+
+main > .about a,
+main > .feedbackForm a {
+  text-decoration: none;
+  color: wheat;
+  background-color: #293f50;
+  padding: .8em;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin: 2% .5% 3%;
+  border-radius: .5em;
+  float: right;
+}
+
+main > .about a:hover,
+main > .feedbackForm a:hover {
+  text-decoration: underline;
+}
+
+.advert {
+  display: none;
+}
+
+.mainFooter {
+  clear: both;
+  background: url(../images/footerBG.jpg);
+  border-top: ridge 2px #606044;
+  padding-top: 3%;
+  color: #fff;
+  min-height: 3em;
+  font-size: .75em;
+  height: 6em;
+}
+
+.copyRight {
+  width: 90%;
+  /* border: 1px solid red; */
+  margin-left: 4%;
+  text-align: center;
+  height: 3em;
+  line-height: 100%;
+}
+
+.educational {
+  font-size: .8em;
+}
+
+.fb {
+  width: 90%;
+  text-align: center;
+  height: 3em;
+  font-size: .9em;
+  margin: 0 4%;
+}
+
+.fbText {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-right: .8em;
+  position: relative;
+  top: -.9em;
+}
+
+.fb > a {
+  display: inline-block;
+}
+
+/* Media query that will set up the CSS to be applied (and will potentially override some of the inherited CSS from above) to devices with a viewport screen with a minimum width of 768px (48rem) */
+
+/* Tablet (portrait mode) breakpoint */
+
+@media screen and (min-width: 48rem) {
+
+  .mainHeader {
+    height: 5em;
+  }
+
+  .mainHeader > h1 {
+    float: left;
+    width: 50%;
+    padding-left: 9.4%;
+    font-size: 3em;
+    font-weight: 300;
+    text-shadow: -1px -1px 0 #000;
+  }
+
+  .mainHeader > h2 {
+    float: right;
+    font-size: 1.2em;
+    width: 30%;
+    font-weight: 200;
+    color: #aaa;
+    line-height: 100%;
+    margin: 3% 4% 0 0;
+  }
+
+  .acw {
+    float: right;
+    font-size: .64em;
+    padding-left: 0;
+  }
+
+  .mainNav {
+    min-height: 2.8em;
+  }
+
+  .mainNav li {
+    display: inline-block;
+    width: 20%;
+  }
+
+  .mainNav li:nth-child(4) {
+    clear: none;
+    margin-left: 0;
+  }
+
+  .mainNav a {
+    font-size: .8em;
+    color: #ddd;
+  }
+
+  .mainNav sup {
+    top: .2em;
+  }
+
+  main {
+    display: flex;
+  }
+
+  main > .soldierPic {
+    position: static;
+    width: 20%;
+    margin: 2.4% 0 3%;
+  }
+
+  #secondWI {
+    width: 9.625em;
+    float: right;
+    max-width: 100%;
+  }
+
+  main > .about {
+    margin: 2.4% 6% 2.4% 5%;
+    width: 60%;
+  }
+
+  main > .about h2,
+  .feedbackForm h2 {
+    font-size: 1.3em;
+    font-weight: normal;
+  }
+
+  main > .about p {
+    font-size: .92em;
+    line-height: 1.5em;
+  }
+
+  .mainFooter {
+    border-top: 1px solid #606044;
+    padding: 2.6% 0 1.4%;
+    font-size: .8em;
+    height: 5em;
+  }
+
+  .educational {
+    font-size: .6em;
+  }
+
+  .fbText {
+    letter-spacing: .04em;
+    top: -.8em;
+  }
+
+}
+
+
+/* Media query breakpoint for normal desktop (1024px = 64rem) on up */
+@media screen and (min-width: 64rem) {
+
+  .mainHeader {
+    height: 6em;
+  }
+
+  .mainHeader > h1 {
+    font-size: 4em;
+  }
+
+  .mainHeader > h2 {
+    font-size: 1.6em;
+  }
+
+  .mainNav {
+    min-height: 4.2em;
+  }
+
+  .mainNav li {
+    position: relative;
+    top: .375rem;
+  }
+
+  .mainNav a {
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  .mainNav sup {
+    top: .225em;
+  }
+
+  main > .about h2,
+  .feedbackForm h2 {
+    font-size: 1.7em;
+  }
+
+  main > .about p {
+    font-size: 1em;
+  }
+
+  .copyRight {
+    float: left;
+    width: 40%;
+    margin-left: 2%;
+    text-align: right;
+    height: auto;
+    line-height: 90%;
+  }
+
+  .fb {
+    float: right;
+    width: 40%;
+    margin-right: 2%;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  .fbText {
+    top: -.6em;
+  }
+
+}
+
+/* Media Query breakpoint for higher resolution desktop (1400px = 87.5rem) on up... */
+@media screen and (min-width: 87.5rem) {
+
+  .mainHeader > h2 {
+    margin: 0;
+    position: relative;
+    top: 2.25rem;
+    right: 2.875rem;
+  }
+
+  .acw {
+    margin-right: 10%;
+  }
+
+  .mainNav {
+    min-height: 6.4em;
+  }
+
+  .mainNav li {
+    top: 1rem;
+  }
+
+  .mainNav a {
+    font-size: 1.4em;
+  }
+
+  .mainNav sup {
+    top: .15em;
+  }
+
+  #secondWI {
+    width: 12.625em;
+  }
+
+  main > .about h2,
+  .feedbackForm h2 {
+    font-size: 2em;
+  }
+
+  main > .about p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  .advert {
+    display: block;
+    border-top: 1.875rem ridge rgba(53, 46, 46, .6);
+    border-bottom: .1875rem ridge rgba(53, 46, 46, .6);
+    background-color: rgba(53, 46, 46, .1);
+    position: relative;
+    top: 2.3rem;
+    right: 2rem;
+    height: 12.5rem;
+    width: 21.25rem;
+    padding: .5rem;
+    text-align: center;
+  }
+
+  .advert h3 {
+    color: #ddd;
+    text-shadow: -1px -3px 0 rgb(53, 46, 46);
+    font-size: 1.2rem;
+    letter-spacing: .125rem;
+    font-weight: normal;
+    position: absolute;
+    top: -1.75rem;
+    left: .625rem;
+  }
+
+  .advert a {
+    color: rgb(53, 46, 46);
+  }
+
+  main > .about a,
+  main > .feedbackForm a {
+    font-size: 1em;
+  }
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workday Calculator</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <h1>Workday Calculator</h1>
+  </header>
+  <main>
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" value="2025-11-03">
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" value="2025-11-07"><br><br>
+    <input id="submitButton" type="button" value="Calculate Days" onclick="main()">
+    <p id="summary"></p>
+    <p id="totalDaysLabel" hidden>Total Days: <span id="totalDays"></span></p>
+    <p id="weekendDaysLabel" hidden>Weekend Days: <span id="weekendDays"></span></p>
+    <p id="observedHolidaysLabel" hidden>Observed holidays: <span id="observedHolidays"></span></p>
+    <p id="businessDaysLabel">Business Days: <span id="businessDays"></span></p>
+    <p><br>This tool calculates business days within a date range.<br>Business days don't include weekends or federally observed holidays.<br>Start date is excluded; end date is included.</p>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

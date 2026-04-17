@@ -1,0 +1,173 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: url(background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: Roboto, Helvetica, sans-serif;
+
+}
+
+header {
+	z-index: 2;
+	background-color: rgba(9, 8, 9, 0.55);
+	border-bottom: 1px solid #972e2e;
+	text-align: center;
+}
+
+.title {
+	color: #FFFFFF;
+}
+
+section {
+	z-index: 0;
+	display: flex;
+	flex: 1;
+}
+
+nav {
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	float: left;
+	width: 25%;
+	min-width: 310px;
+	padding: 5%;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 25px;
+}
+nav ul li {
+	display: flex;
+}
+
+button {
+	background-color: #26282a;
+	color: #fff;
+	border: 1px solid #972e2e;
+	font-weight: 800;
+	text-transform: uppercase;
+	padding: 10px 26px;
+	margin: 10px 13px;
+}
+
+.freerollItem {
+	background-color: #26282a;
+	color: #fff;
+	width: 83%;
+	border: 1px solid #972e2e;
+	padding: 10px 26px;
+	margin: 10px 13px;
+}
+
+article {
+	float: left;
+	padding: 20px;
+	width: 75%;
+}
+
+label {
+	margin: 0 3%;
+	display: inline-block;
+	width: auto;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+input {
+	background-color: #26282a;
+	color: #fff;
+	border: 1px solid #972e2e;
+	width: 65%;
+	font-size: 1em;
+	padding: 8.5px 10px;
+}
+
+input:focus {
+	outline: 3px solid #972e2e;
+}
+
+.inputButton {
+	width: 15%;
+	min-width: 100px;
+	margin: 0;
+}
+
+.cont {
+	margin-bottom: 30px;
+	padding: 10px 20px;
+	border: 2px solid #972e2e;
+	border-radius: 10px;
+	background-color: rgba(9, 8, 9, 0.55);
+}
+
+table {
+	width: 100%;
+	border-spacing: 20px 10px;
+}
+
+th, td {
+	border: 1px solid #972e2e;
+}
+
+th, td {
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	background-color: #26282a;
+}
+
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+footer {
+	background-color: rgba(9, 8, 9, 0.55);
+	border-top: 1px solid #972e2e;
+	z-index: 1;
+	text-align: center;
+}
+
+.footerMessage {
+	color: #a5afba;
+}
+
+@media (max-width: 600px) {
+	section {
+		display: block;
+	}
+
+	nav, article {
+		width: 100%;
+		height: auto;
+	}
+
+	nav ul li {
+		display: inline-block;
+	}
+
+	input {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.roll {
+		width: 100%;
+	}
+}
