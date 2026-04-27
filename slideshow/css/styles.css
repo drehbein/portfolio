@@ -1,0 +1,117 @@
+body {
+	font-family: 'Rock Salt', 'Trebuchet MS', sans-serif;
+	color: #ddd;
+	background-color: #000;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+
+h2 {
+	font-family: 'Comic Sans MS';
+}
+
+img {
+	border-radius: 10px;
+	background-color: #ddd;
+	padding: 10px;
+	padding-bottom: 40px;
+}
+
+p.picCaption {
+	color: #222;
+	position: relative;
+	top: -65px;
+}
+
+.slider {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.slider img {
+  width: 90%;
+  max-width: 100%;
+  opacity: 0;
+  margin: 10% auto 0;
+}
+
+img.displaySlide {
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: .625rem .9375rem;
+  background-color: hsla(0, 0%, 0%, .5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.dots {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 1.25rem;
+  text-align: center;
+  z-index: 2000;
+  user-select: none;
+}
+
+.dots span {
+  display: inline-block;
+  position: relative;
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background: #e4b42d;
+  margin: .3125rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1) inset,
+              2px 2px 1px rgba(255, 255, 255, .4);
+}
+
+.dots span.currentDot::after {
+  content: '';
+  width: .5rem;
+  height: .5rem;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(246, 246, 246, 1) 47%,
+      rgba(237, 237, 237, 1) 100%,
+  );
+
+}

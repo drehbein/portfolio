@@ -1,0 +1,25 @@
+/* Reset margin and padding */
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+.magnify {
+	position: relative;
+	width: 37.5rem;
+	margin: 3.125rem auto;
+}
+
+.large {
+	position: absolute;
+	width: 12.5rem;
+	height: 9.5rem;
+	border-radius: 40%;
+	box-shadow: 0 0 0 .625rem rgba(80, 80, 80, 0.5),
+							0 0 .438rem .438rem rgba(20, 20, 20, 0.8),
+							inset 0 0 2.5rem .125rem rgba(0, 0, 0, 0.8);
+	background: url('../images/Galgenberg_orig.jpg') no-repeat;
+	display: none;
+	opacity: 0;
+  transition: opacity .1s ease-in-out;
+}
