@@ -35,21 +35,30 @@ let showSlide = () => {
   if (currentDotSpan) {
     currentDotSpan.classList.remove('currentDot');
   }
-  
   dotSpans[slideIndex].classList.add('currentDot');
+
+  // Ensures images is loaded before transition
+  const nextSrc = `images/pics/pic${picFileNames[slideIndex]}.jpg`;
   slide.classList.remove('displaySlide');
-  setTimeout(() => {
-    slide.src = `images/pics/pic${picFileNames[slideIndex]}.jpg`;
+  slide.onload = () => {
     picCaption.textContent = captions[slideIndex];
     slide.classList.add('displaySlide');
-  }, 25);
-  intervalId = setInterval(nextSlide, 2000);
+  };
+  slide.src = nextSrc;
+
+  intervalId = setInterval(nextSlide, 4000);
 };
+
+// Preloading images
+picFileNames.forEach(name => {
+  const img = new Image();
+  img.src = `images/pics/pic${name}.jpg`;
+});
 
 let initializeSlider = () => {
   slide.classList.add('displaySlide');
   dotSpans[slideIndex].classList.add('currentDot');
-  intervalId = setInterval(nextSlide, 2000);
+  intervalId = setInterval(nextSlide, 4000);
 };
 
 dotsNav.classList.add('dots');
