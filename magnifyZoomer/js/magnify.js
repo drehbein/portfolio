@@ -67,9 +67,7 @@ class MagnifyZoomer {
 
       if (mouseX <= 0 || mouseX > this.smallImage.width || mouseY <= 0 || mouseY > this.smallImage.height) {
         glass.style.opacity = 0;
-        setTimeout(() => {
-          glass.style.display = 'none';
-        }, 1000)
+        glass.style.display = 'none';
       }
     });
   }
